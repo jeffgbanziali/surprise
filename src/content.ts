@@ -1,19 +1,19 @@
 export const LETTRE = [
-  "Mon amour, ma Sainte-Union de Jo-Christ,",
-  "je suis sincèrement désolé pour notre dispute.",
+  "Mon amour, Pipillonnnnnnnnnnnn,",
+  "je suis désolé pour notre dispute de la dernière fois.",
   "Je regrette que nous ayons vécu ce moment et que mes paroles ou mes réactions aient pu te faire de la peine.",
   "Je ne veux pas minimiser ce que tu ressens ni chercher des excuses.",
   "J’aimerais prendre le temps de t’écouter, de comprendre ton cœur et de reconnaître ce que je dois améliorer.",
   "Tu comptes énormément pour moi, et je veux que mon amour se voie aussi dans ma manière de te respecter, de te parler et de prendre soin de nous.",
   "Je ne te demande pas de tout oublier ni de me pardonner immédiatement.",
   "Je voulais simplement te dire pardon, avec sincérité, et te laisser la liberté de ressentir les choses à ton rythme.",
-  "Si tu en as envie, je serai là pour qu’on puisse se parler doucement.",
+  "Si tu en as envie, je serai là pour qu’on puisse se parler doucement et discuter de la clause pour les réparations des dégâts causés.",
   "Je t’aime.",
 ];
 export const SIGNATURE = "Celui qui t’aime et veut apprendre à mieux aimer, moi ❤️";
-export const HOMME_POIRE = "De la part de ton Homme Poire 🍐";
+export const HOMME_POIRE = "De la part de l'Homme Poire 🍐";
 export const LETTRE_COEUR = [
-  "Mon amour, je pense à notre dispute et je tiens à te dire que je suis désolé. Je reconnais ma part de responsabilité dans ce qui s’est passé.",
+  "Tina Tina, je pense à notre dispute et je tiens à te présenter mes excuses. Je reconnais ma part de responsabilité dans ce qui s’est passé.",
   "Je comprends que mes paroles ou ma façon de réagir ont pu te blesser. Ce que tu ressens est important, et je ne cherche ni à l’effacer ni à me justifier.",
   "Je souhaite t’écouter avec attention et apprendre à mieux faire. Prends le temps qu’il te faut\u00a0: je suis là, avec respect et tendresse. Je t’aime.",
 ];

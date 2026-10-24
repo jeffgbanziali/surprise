@@ -3,7 +3,7 @@ import Bouton from "../components/Bouton";
 import Coeur from "../components/Coeur";
 import { HOMME_POIRE } from "../content";
 import { demarrerMusique } from "../lib/musique";
-const TITRE = "Pour toi, ma Sainte-Union de Jo-Christ".split(" ");
+const TITRE = "For you, Tina Tinaaaaaaaaaaaaaaaaaaaa".split(" ");
 export default function Intro({ go }: { go: (n: number) => void }) {
   return (
     <>
