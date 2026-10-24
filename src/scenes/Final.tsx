@@ -35,7 +35,7 @@ export default function Final() {
           <p className="max-w-[36ch] text-base text-ivoire/90">Si tu l’envoies, ta réponse arrive uniquement à lui, via le formulaire de ce site. Rien d’autre n’est collecté.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Bouton douce disabled={enCours} onClick={netlify}>{enCours ? "Envoi…" : "Envoyer ma réponse"}</Bouton>
-            {CONFIG.whatsapp && <a className="btn min-h-11" target="_blank" rel="noopener noreferrer" href={`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texte)}`}>WhatsApp</a>}
+            {CONFIG.whatsapp && <a className="btn min-h-11" target="_blank" rel="noopener noreferrer" href={`https://wa.me/${CONFIG.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(texte)}`}>WhatsApp</a>}
             {CONFIG.email && <a className="btn soft min-h-11" href={`mailto:${CONFIG.email}?subject=${encodeURIComponent("Ma réponse")}&body=${encodeURIComponent(texte)}`}>E-mail</a>}
           </div>
           {envoi && <p role="status" className="text-base">{envoi}</p>}

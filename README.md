@@ -16,8 +16,8 @@ Prérequis : Node.js 18 ou plus.
 ## Héberger sur Netlify
 1. Mets le dossier sur GitHub, puis « Add new site > Import from Git » dans Netlify (build : `npm run build`, dossier : `dist`, déjà dans netlify.toml). Ou glisse le dossier `dist` sur https://app.netlify.com/drop.
 2. Réponse en ligne : le bouton « Envoyer ma réponse » utilise Netlify Forms (formulaire « reponse »). Les envois apparaissent dans Netlify > Forms. Pour les recevoir par e-mail : Forms > Form notifications > Add notification > Email. Remarque : Netlify Forms demande un déploiement depuis Git ou via le build Netlify (le glisser-déposer de `dist` détecte aussi le formulaire).
-3. Le bouton 📊 (ou l'adresse `/#tableau`) affiche l'activité de l'appareil courant uniquement.
+3. Pas de tableau de bord : sa réponse arrive via Netlify Forms (onglet Forms), par WhatsApp ou par e-mail, seulement si elle choisit de l'envoyer.
 
 ## Musique
 Aucune musique incluse. Bouton « Musique » : choisis un fichier audio libre de droits sur ton appareil.
-Pour en embarquer une, place-la dans `public/` (ex. `public/musique.mp3`) et utilise `/musique.mp3` comme `src` du lecteur.
+La musique `public/musique/Chocolat.mp3` démarre quand elle clique sur « Découvrir ma surprise » (`src/lib/musique.ts`). Un petit bouton discret permet de couper le son. Vérifie les droits du morceau avant de publier.

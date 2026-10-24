@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Bouton from "../components/Bouton";
 import Coeur from "../components/Coeur";
+import { HOMME_POIRE } from "../content";
+import { demarrerMusique } from "../lib/musique";
 const TITRE = "Pour toi, ma Sainte-Union de Jo-Christ".split(" ");
 export default function Intro({ go }: { go: (n: number) => void }) {
   return (
@@ -13,8 +15,9 @@ export default function Intro({ go }: { go: (n: number) => void }) {
       </h1>
       <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 2, duration: 1.4 }} className="max-w-[30ch] text-[1.4rem] italic">J’ai quelque chose à te dire, du fond du cœur…</motion.p>
       <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 2.6, type: "spring", stiffness: 160, damping: 14 }}>
-        <Bouton onClick={() => go(1)}>Découvrir ma surprise</Bouton>
+        <Bouton onClick={() => { demarrerMusique(); go(1); }}>Découvrir ma surprise</Bouton>
       </motion.div>
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.85 }} transition={{ delay: 3.4, duration: 1.6 }} className="font-script text-[1.6rem] text-lilas">{HOMME_POIRE}</motion.p>
     </>
   );
 }

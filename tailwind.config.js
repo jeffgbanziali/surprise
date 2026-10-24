@@ -2,7 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: { extend: {
-    colors: { bordeaux: "#6d1230", nuit: "#10030a", blush: "#f6cbd5", ivoire: "#fbf3e4", or: "#dcb76d", rose: "#e8456f" },
+    colors: { bordeaux: "#6d1230", nuit: "#10030a", blush: "#f6cbd5", ivoire: "#fbf3e4", or: "#dcb76d", rose: "#e8456f", violet: "#8b5cf6", lilas: "#c4b5fd" },
     fontFamily: { script: ['"Great Vibes"', "cursive"], serif: ['"Cormorant Garamond"', "Georgia", "serif"] }
   } },
   plugins: []

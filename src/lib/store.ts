@@ -28,7 +28,7 @@ export const lire = (): Etat => {
 };
 export const ecrire = (e: Etat) => { try { localStorage.setItem(K, JSON.stringify(e)); } catch { /* stockage indisponible */ } };
 export const enregistrer = (ev: string, patch: Partial<Etat> = {}): Etat => {
-  const e = lire(); const n = { ...e, ...patch, journal: [...e.journal, { t: Date.now(), ev }].slice(-40) }; ecrire(n); return n;
+  const e = lire(); void ev; const n = { ...e, ...patch, journal: [] }; ecrire(n); return n;
 };
 export const lireScene = (): number => {
   try {

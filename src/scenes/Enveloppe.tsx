@@ -13,7 +13,7 @@ export default function Enveloppe({ go }: { go: (n: number) => void }) {
   const ouvrir = () => {
     if (ouverte) return; setOuverte(true); fx.petals(40); enregistrer("Enveloppe ouverte");
     clearTimeout(t.current);
-    t.current = window.setTimeout(() => setLettre(true), matchMedia("(prefers-reduced-motion:reduce)").matches ? 0 : 1500);
+    t.current = window.setTimeout(() => setLettre(true), matchMedia("(prefers-reduced-motion:reduce)").matches ? 0 : 4200);
   };
   const rejouer = () => {
     clearTimeout(t.current);

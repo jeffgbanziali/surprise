@@ -11,15 +11,17 @@ export const LETTRE = [
   "Je t’aime.",
 ];
 export const SIGNATURE = "Celui qui t’aime et veut apprendre à mieux aimer, moi ❤️";
+export const HOMME_POIRE = "De la part de ton Homme Poire 🍐";
 export const LETTRE_COEUR = [
   "Mon amour, je pense à notre dispute et je tiens à te dire que je suis désolé. Je reconnais ma part de responsabilité dans ce qui s’est passé.",
   "Je comprends que mes paroles ou ma façon de réagir ont pu te blesser. Ce que tu ressens est important, et je ne cherche ni à l’effacer ni à me justifier.",
   "Je souhaite t’écouter avec attention et apprendre à mieux faire. Prends le temps qu’il te faut\u00a0: je suis là, avec respect et tendresse. Je t’aime.",
 ];
 export const AIME = [
-  "Ta présence apporte à ma vie une lumière que je ne voudrais jamais perdre.",
-  "Tu comptes tellement pour moi. Être avec toi, c’est trouver un endroit où mon cœur se sent chez lui.",
-  "Merci d’être toi, simplement. Je te l’écris avec toute la sincérité de mon cœur\u00a0: je t’aime, et je veux mieux te le montrer.",
+  "Je ne te demande rien en t’écrivant ces mots. Je voulais seulement que tu saches ce que tu représentes pour moi.",
+  "Pipillon, Ndourou, Ceinture, Tina Tina… tous ces petits noms que seuls nous comprenons me font sourire rien que d’y penser.",
+  "Ta présence rend mes journées plus douces. Près de toi, je me sens chez moi.",
+  "Quoi que tu décides de ressentir ou de faire de ces mots, ils restent un cadeau, sans condition. Je tenais simplement à te dire combien tu comptes.",
 ];
 export const VOEUX: [string, string][] = [
   ["Patience", "Je prendrai le temps, sans me presser."],

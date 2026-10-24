@@ -38,7 +38,7 @@ function Bouquet() {
           </g>
         ))}
       </svg>
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 5.5, duration: 1.5 }} className="italic">Pétale après pétale, comme mon amour qui grandit quand je prends le temps de t’écouter. Ce petit moment est pour toi, sans rien attendre en retour. 🌹</motion.p>
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 5.5, duration: 1.5 }} className="italic">Pour toi, Pipillon. Pétale après pétale, comme mon amour qui grandit quand je prends le temps de t’écouter. Ce petit moment est pour toi, sans rien attendre en retour. 🌹</motion.p>
     </div>
   );
 }

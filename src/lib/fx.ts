@@ -40,7 +40,7 @@ export function startFx(cv: HTMLCanvasElement) {
       if (p.l < 1e8) { p.l--; p.vy += 0.03; }
       const d = Math.hypot(p.x - mx, p.y - my); if (d < 100 && p.l > 1e8) p.x += ((p.x - mx) / d) * 2.5;
       cx.save(); cx.translate(p.x, p.y); cx.globalAlpha = p.l < 1e8 ? p.l / 70 : 0.85;
-      if (p.t === "p") { cx.rotate(p.a); cx.fillStyle = "#e8456f"; cx.beginPath(); cx.ellipse(0, 0, p.r, p.r * 0.55, 0, 0, 6.3); cx.fill(); }
+      if (p.t === "p") { cx.rotate(p.a); cx.fillStyle = p.r > 10 ? "#a78bfa" : "#e8456f"; cx.beginPath(); cx.ellipse(0, 0, p.r, p.r * 0.55, 0, 0, 6.3); cx.fill(); }
       else { cx.fillStyle = p.t === "h" ? "#ff7fa3" : "#dcb76d"; cx.beginPath(); cx.arc(0, 0, p.r, 0, 6.3); cx.fill(); }
       cx.restore();
     }
