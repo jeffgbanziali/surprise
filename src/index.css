@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/cormorant-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/cormorant-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/cormorant-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/great-vibes.woff2") format("woff2");
+}
+
+:root{--spring:linear(0,.35 7%,.8 17%,1.04 28%,1.05 36%,.99 50%,1);--soft:cubic-bezier(.22,1,.36,1);--mx:0;--my:0;color-scheme:dark}
+html,body{height:100%}
+body{@apply bg-nuit text-ivoire font-serif text-[1.2rem] leading-normal overflow-x-hidden;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #dcb76d;outline-offset:3px}
+#bg{position:fixed;inset:-10%;z-index:0;background:radial-gradient(60% 50% at calc(50% + var(--mx)*40px) calc(25% + var(--my)*30px),#5d1233 0,transparent 70%),radial-gradient(50% 40% at 80% 90%,#3b0a22 0,transparent 70%)}
+@layer components{
+  .titre{@apply font-script font-normal text-blush leading-tight;text-shadow:0 0 34px #e8456f88;font-size:clamp(2rem,7vw,3.2rem)}
+  .glass{background:linear-gradient(145deg,#ffffff1f,#ffffff08);border:1px solid #ffffff30;backdrop-filter:blur(8px);border-radius:24px;box-shadow:0 24px 70px #000a,inset 0 1px #ffffff30}
+  .ib{@apply inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-4 py-2.5 text-base;background:#ffffff14;border:1px solid #ffffff30;backdrop-filter:blur(8px);transition:background .3s}
+  .ib:hover{background:#ffffff26}
+  .btn{@apply relative inline-flex min-h-11 items-center justify-center overflow-hidden rounded-full border border-or px-7 py-3.5 text-[1.15rem] no-underline;background:linear-gradient(135deg,#9a1f48,#5c0e28);transition:box-shadow .5s}
+  .btn:hover{box-shadow:0 8px 40px #dcb76d55}
+  .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffff40 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--soft)}
+  .btn:hover::after{transform:translateX(120%)}
+  .btn.soft{background:#ffffff10;border-color:#ffffff40}
+}
+.beat{animation:beat 1.7s infinite;filter:drop-shadow(0 0 22px #ff3b6e)}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.13)}28%{transform:scale(1)}42%{transform:scale(1.07)}}
+/* enveloppe 3D */
+.env{width:min(84vw,340px);height:225px;position:relative;transform-style:preserve-3d;background:none;border:0;padding:0;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1);transition:transform .6s var(--spring);filter:drop-shadow(0 0 24px #ff5c8a66)}
+.env>*{position:absolute}
+.eb{inset:0;background:#7a1530;border-radius:8px;box-shadow:0 30px 60px #000b,0 0 50px #e8456f33}
+.paper{left:6%;right:6%;top:6%;height:88%;background:#fbf3e4;border-radius:4px;transition:transform 1.4s .6s cubic-bezier(.22,1,.36,1);transition:transform 1.4s .6s var(--spring);z-index:2;color:#5a0d26;display:grid;place-items:center;font:1.9rem "Great Vibes"}
+.ef{inset:0;background:linear-gradient(135deg,#a82350,#6d1230);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);z-index:3}
+.flap{left:0;right:0;top:0;height:58%;background:linear-gradient(#9a1c40,#6d1230);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform 1s .3s var(--soft);z-index:4}
+.seal{left:50%;top:50%;width:64px;height:64px;margin:-32px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ee5478,#8a0f2d);z-index:5;display:grid;place-items:center;box-shadow:0 5px 16px #000a;transition:.7s var(--soft);font-size:1.7rem}
+.open .seal{transform:scale(1.8) rotate(30deg);opacity:0;filter:blur(6px)}
+.open .flap{transform:rotateX(180deg);z-index:1}
+.open .paper{transform:translateY(-72%)}
+.rip{position:fixed;pointer-events:none;width:30px;height:30px;margin:-15px;z-index:9;color:#ff6b93;animation:rip 1.6s var(--soft) forwards}
+@keyframes rip{to{transform:scale(12);opacity:0}}
+.gift{position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s;transition:transform .6s var(--spring),border-color .4s,box-shadow .4s;animation:fl 5s ease-in-out infinite}
+.gift:nth-child(2n){animation-delay:-2s}
+@keyframes fl{50%{translate:0 -6px}}
+.gift::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),#ffffff35,transparent 55%);opacity:0;transition:opacity .4s}
+.gift:hover::before{opacity:1}
+.gift:hover,.gift.done{border-color:#dcb76d;box-shadow:0 0 36px #dcb76d44}
+.star{filter:drop-shadow(0 0 8px #dcb76d)}
+.waves b{display:block;width:4px;background:#dcb76d;height:4px;border-radius:2px}
+.play .waves b{animation:wv 1s infinite ease-in-out}
+.waves b:nth-child(2n){animation-delay:.2s}.waves b:nth-child(3n){animation-delay:.4s}
+@keyframes wv{50%{height:22px}}
+@media (max-width:768px){.glass,.ib{backdrop-filter:blur(4px)}}
+@media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
